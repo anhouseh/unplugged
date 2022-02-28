@@ -101,7 +101,7 @@ body {
 }
 
 ul,
-ol, {
+ol {
   list-style-type: none;
 }
 
@@ -129,6 +129,14 @@ p {
   line-height: 1.285;
 }
 
+img {
+  width: 100%;
+}
+
+figure {
+  margin: 0;
+}
+
 address {
   font-style: normal;
 }
@@ -141,6 +149,7 @@ address {
 
 header, 
 footer {
+  background-color: #202322;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -163,8 +172,16 @@ header .content-wrapper {
 
 }
 
+header figure {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
 .header-divider {
-  backgroung: #3a3a3a;
+  background: #3a3a3a;
   width: 100%;
   height: 1px;
   margin: 10px 0 20px 0;
@@ -187,6 +204,10 @@ header nav ul {
   justify-content: space-around;
   width: 100%;
 
+}
+
+header nav ul li {
+  font-size: 1.125em;
 }
 
 footer {
@@ -230,6 +251,10 @@ footer .copyright {
 /* Hero Area */
 
 .hero-area {
+  background: url(../img/unplugged-retreat.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
@@ -255,6 +280,7 @@ aside {
 aside .form {
   margin-top: 30px;
 }
+
 input[type=text] {
   box-sizing: border-box;
   width: 100%;
@@ -280,6 +306,9 @@ input[type=button] {
 /* Features */
 
 .features {
+  background: url ('../img/unplugged-retreat-features.jpg');
+  background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
@@ -301,7 +330,13 @@ input[type=button] {
   flex-flow: row wrap;
 }
 
+.features i {
+  font-size: 3.75em;
+  margin-bottom: 40px;
+}
+
 .features p {
+  text-align: center;
   margin: 0;
 }
 
@@ -336,7 +371,7 @@ input[type=button] {
   flex-flow: row wrap;
 }
 
-contact-section {
+.contact-section {
   background-color: #2a423a;
   display: flex;
   justify-content: center;
@@ -346,6 +381,22 @@ contact-section {
 
 .contact-centent p {
   margin: 0;
+}
+
+.map figure {
+  width: 100%;
+  height: 0; 
+  padding-bottom: 125%; 
+  overflow: hidden;
+  position: relative;
+}
+
+.map iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute; 
+  top: 0; 
+  left: 0; 
 }
 
 /* ==========================================================================
@@ -477,6 +528,16 @@ contact-section {
   margin: 100px 0;
 }
 
+h2 {
+  font-size: 2.25em;
+  line-height: 1.333;
+}
+
+h3 {
+  font-size: 1.5em;
+  line-height: 1.25;
+}
+
 /* Header */
 header {
   justify-content: space-around;
@@ -485,6 +546,11 @@ header {
 
 header .content-wrapper {
   width: 20%;
+  justify-content: space-between;
+}
+
+header figure {
+  width: 30%;
 }
 
 header nav {
@@ -500,6 +566,16 @@ header nav ul {
 }
 
 /* Hero Area */
+
+hero-area {
+  min-height: 600px;
+}
+
+hero-area h1 {
+  font-size: 3em;
+  line-height: 1;
+  margin: 0;
+}
 
 /* Aside*/
 
@@ -519,6 +595,10 @@ aside .content-wrapper .form {
 
 /* Features */
 
+.features h2 {
+  margin-bottom: 20px;
+}
+
 .features article {
   display: flex;
   justify-content: center;
@@ -537,8 +617,18 @@ aside .content-wrapper .form {
   justify-content: space-between;
 }
 
+.reviews h2 {
+  width: 85%;
+}
+
+.reviews article figure,
 reviews article div {
   width: 49%;
+}
+
+.reviews h3 {
+  width: 75%;
+  margin: 0;
 }
 
 /* Footer */
@@ -551,10 +641,20 @@ footer .content-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
 }
 
 footer .contact {
   margin-bottom: 0;
+}
+
+footer h4 {
+  font-size: 1.5em;
+  margin-bottom: 40px;
+}
+
+footer p {
+  line-height: 1.285;
 }
 
 footer .copyright {
@@ -584,11 +684,11 @@ footer .copyright {
   align-items: flex-start;
 }
 
-/* FAQ */
-
-header {
-  padding: 15px 0;
+.content-content h4 {
+  font-size: 1.5em;
 }
+
+/* FAQ */
 
 .faq .content-wrapper {
   justify-content: space-between;
@@ -602,18 +702,43 @@ header {
   width: 100%;
 }
 
+.faq h4,
+.faq p {
+  font-size: .875em;
+  line-height: 1.125;
+}
+
 }
 
 @media only screen and (min-width: 1200px) {
   /*Desktop styles here*/
 
+  header {
+    padding: 15px 0;
+  }
+
   .content-wrapper {
     max-width: 960px;
   }
 
+  h2 {
+    font-size: 2.25em;
+  }
+
+  h3,
+  h4 {
+    font-size: 1.875em;
+  }
+
+  p {
+    font-size: 1.125em;
+    line-height: 1.333;
+  }
+
   /* Hero */
   .hero-area h1 {
-    width: 60%;
+    font-size: 3.75em;
+    width: 80%;
   }
 
   /* Aside */
@@ -627,6 +752,10 @@ header {
     width: 30%;
   }
 
+  .form-description p {
+    font-size: 1.125em;
+  }
+
   /* Features */
 
   .features h2 {
@@ -638,22 +767,47 @@ header {
   }
 
   /* Reviews */
+
   .reviews article div {
     width: 42%;
   }
 
+  .reviews h2 {
+    padding-bottom: 50px;
+  }
+
+  footer h4 {
+    font-size: 1.875em;
+  }
+
+
   /* About Page */
+  .map figure {
+    padding-bottom: 37.5%;
+  }
 
   .mission h2,
   .contact-section .content-wrapper h2 {
     width: 95%;
+    font-size: 3em;
+  }
+
+  .contact-content h4 {
+    font-size: 1.875em;
   }
 
   /* FAQ Page */
+
   .faq h2 {
     width: 100%;
+    font-size: 3em;
   }
 
+  .faq h4,
+  .faq p {
+    font-size: 1.125em;
+    line-height: 1;
+  }
 }
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
